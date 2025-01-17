@@ -6,21 +6,14 @@ layout: home
 
 # Inhaltsverzeichnis
 
-Hyperlinks zu den Lab-Übungen und Demos sind nachfolgend aufgelistet.
+Beispieldateien werden von zwei Simulationen im Übungsmodul verwendet, das auf Microsoft Learn veröffentlicht wurde, wie unten aufgeführt.
 
-## Labs
+### Beispieldateien
+</br>
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
-| Modul | Lab |
-| --- | --- | 
-{% for activity in labs  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} – {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
-
-## Demos
-
-{% assign demos = site.pages | where_exp:"page", "page.url contains '/Instructions/Demos'" %}
-| Modul | Demo |
-| --- | --- | 
-{% for activity in demos  %}| {{ activity.demo.module }} | [{{ activity.demo.title }}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
+| Modul | Einheit (Simulation) | SampleFile |
+| --- | --- | --- |
+| Erkunden von Anwendungsfällen von Microsoft Copilot Security Copilot | Aktivieren eines benutzerdefinierten Plug-Ins | KQL_DefenderExample.yaml |
+| Erkunden von Anwendungsfällen von Microsoft Copilot Security Copilot | Durchsuchen von Dateiuploads als Wissensdatenbank | Woodgrove Corporate Data Handling Policy.docx |
+| Erkunden von Anwendungsfällen von Microsoft Copilot Security Copilot | Durchsuchen von Dateiuploads als Wissensdatenbank | Woodgrove Corporate Data Handling Policy.pdf |
 
